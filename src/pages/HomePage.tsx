@@ -1,7 +1,8 @@
 import React from "react";
+import CommonTeamplate from "../components/Template/CommonTeamplate";
 
 const HomePage: React.FC = () => {
-  return <div>HomePage</div>;
+  return <CommonTeamplate>HomePage</CommonTeamplate>;
 };
 
 export default HomePage;
