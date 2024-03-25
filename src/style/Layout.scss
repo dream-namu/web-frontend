@@ -6,21 +6,16 @@ $sidebar-transition-duration: 0.3s;
   display: flex;
 
   &__sidebar {
-    width: 200px;
-    height: 100vh;
-    overflow: hidden;
-    border-right: 1px solid #333;
-
     .sidebar {
       width: $sidebar-width;
       position: fixed;
-      left: 0;
+      left: 30;
       top: 0;
       height: 100%;
       background-color: #1a202c;
       color: white;
       box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-      transform: translateX(-100%);
+      transform: translateX(calc(-100% + 30px));
       transition: transform $sidebar-transition-duration ease-in-out;
     }
 
@@ -56,12 +51,14 @@ $sidebar-transition-duration: 0.3s;
 
     // Button to toggle sidebar
     .sidebar-toggle {
-      position: fixed;
-      left: 0;
+      position: absolute;
+      right: -20px;
       top: 10px;
       z-index: 100;
       cursor: pointer;
-      padding: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
       background-color: #3182ce;
       color: white;
       border: none;

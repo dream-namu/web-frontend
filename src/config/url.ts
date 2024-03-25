@@ -1,4 +1,5 @@
 export const url = {
   home: "/",
-  about: "about",
+  about: "/about",
+  list: "/list",
 };

@@ -1,24 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { url } from "../../../config/url";
+import useLayoutStore from "../../../store/LayoutStore";
 
 const CommonSidebar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isSidebarOpen, toggleSidebar } = useLayoutStore();
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
   return (
     <>
-      <button className="sidebar-toggle" onClick={toggleSidebar}>
-        Toggle Sidebar
-      </button>
-      <div className={`sidebar ${isOpen ? "open" : ""}`}>
+      <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
+        <button
+          className="sidebar-toggle"
+          onClick={() => toggleSidebar(!isSidebarOpen)}
+        >
+          {isSidebarOpen ? <FaChevronLeft /> : <FaChevronRight />}
+        </button>
         <div className="sidebar-header">Menu</div>
         <ul className="sidebar-menu">
           <li>
-            <a href="#">Home</a>
+            <Link to={url.home}>Home</Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to={url.about}> About</Link>
           </li>
           <li>
             <a href="#">Services</a>

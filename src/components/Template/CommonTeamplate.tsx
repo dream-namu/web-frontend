@@ -12,10 +12,10 @@ const CommonTeamplate: React.FC<CommonTemplateProps> = ({ children }) => {
   return (
     <Box className="layout">
       <Box className="layout__sidebar">
-        <CommonSidebar></CommonSidebar>
+        <CommonSidebar />
       </Box>
       <Box className="layout__header">
-        <CommonHeader></CommonHeader>
+        <CommonHeader />
         {children}
       </Box>
     </Box>
