@@ -15,7 +15,7 @@ const LayoutStore = create(
       },
     }),
     {
-      name: "layout", // name of the item in the storage (must be unique)'localStorage' is used
+      name: "layout",
     }
   )
 );

@@ -5,72 +5,71 @@ $sidebar-transition-duration: 0.3s;
 .layout {
   display: flex;
 
-  &__sidebar {
-    .sidebar {
-      width: $sidebar-width;
-      position: fixed;
-      left: 30;
-      top: 0;
-      height: 100%;
-      background-color: #1a202c;
-      color: white;
-      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-      transform: translateX(calc(-100% + 30px));
-      transition: transform $sidebar-transition-duration ease-in-out;
-    }
+  .sidebar {
+    width: $sidebar-width;
+    position: fixed;
+    left: 30;
+    top: 0;
+    height: 100%;
+    background-color: #1a202c;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(calc(-100% + 30px));
+    transition: transform $sidebar-transition-duration ease-in-out;
+  }
 
-    .sidebar.open {
-      transform: translateX(0);
-    }
+  .sidebar.open {
+    transform: translateX(0);
+  }
 
-    .sidebar-header {
-      padding: 20px;
-      background-color: #2d3748;
-      text-align: center;
-    }
+  .sidebar-header {
+    padding: 20px;
+    background-color: #2d3748;
+    text-align: center;
+  }
 
-    .sidebar-menu {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-      li {
-        padding: 10px 20px;
-
-        &:hover {
-          background-color: #4a5568;
-        }
-      }
-
-      a {
-        text-decoration: none;
-        color: white;
-        display: block;
-      }
-    }
-
-    // Button to toggle sidebar
-    .sidebar-toggle {
-      position: absolute;
-      right: -20px;
-      top: 10px;
-      z-index: 100;
-      cursor: pointer;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #3182ce;
-      color: white;
-      border: none;
-      transition: background-color $sidebar-transition-duration ease-in-out;
+    li {
+      padding: 10px 20px;
 
       &:hover {
-        background-color: #63b3ed;
+        background-color: #4a5568;
       }
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      display: block;
     }
   }
 
-  &__header {
+  // Button to toggle sidebar
+  .sidebar-toggle {
+    position: absolute;
+    right: -20px;
+    top: 10px;
+    z-index: 100;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    transition: background-color $sidebar-transition-duration ease-in-out;
+
+    &:hover {
+      background-color: #63b3ed;
+    }
+  }
+
+  &__content-wrap {
     width: calc(100% - 200px);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }

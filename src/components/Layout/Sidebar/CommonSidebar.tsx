@@ -6,7 +6,7 @@ import useLayoutStore from "../../../store/LayoutStore";
 
 const CommonSidebar: React.FC = () => {
   const { isSidebarOpen, toggleSidebar } = useLayoutStore();
-
+  console.log("isSidebarOpen >>", isSidebarOpen);
   return (
     <>
       <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
