@@ -26,7 +26,7 @@ jobs:
           ls -al
 
       - name: Transfer frontend to server
-        uses: appleboy/scp-action@master
+        uses: appleboy/scp-action@v0.1.2
         with:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USER }}
@@ -35,3 +35,4 @@ jobs:
           source: "./dist/*" # 수정된 빌드 파일 경로
           target: "/var/www/html"
           overwrite: true
+          debug: true
