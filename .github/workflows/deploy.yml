@@ -34,3 +34,4 @@ jobs:
           port: 22
           source: "./dist/*" # 수정된 빌드 파일 경로
           target: "/var/www/html"
+          overwrite: true
